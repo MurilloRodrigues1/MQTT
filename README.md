@@ -56,7 +56,6 @@ sudo nano /etc/mosquitto/mosquitto.conf
 ```
 ### 2. Dentro do arquivo, você pode adicionar configurações como:
 ```
-conf
 listener 1883 --> identifica a porta para o MQTT  
 allow_anonymous true --> Define que qualquer um tem acesso ao broker sem identificação    
 ```
