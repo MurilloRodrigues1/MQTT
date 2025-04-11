@@ -2,10 +2,10 @@
 Nosso projeto consiste na implementação de um broker MQTT em uma Raspberry Pi, facilitando a comunicação entre dispositivos IoT
 ##  COMANDOS PARA DEFINIR AS FUNÇÕES 💼:
 ```
-mosquitto_sub -h localhost -t "chat/grupo1" --> definiu onde "quer receber" a mensagem
+mosquitto_sub -h 111.111.1.111 -t "chat/grupo1" --> definiu onde "quer receber" a mensagem
 ```
 ```
-mosquitto_pub -h localhost -t "chat/grupo1" -m "Salve grupo, Testando" --> Mandou a mensagem pelo broker local
+mosquitto_pub -h 111.111.1.111 -t "chat/grupo1" -m "Salve grupo, Testando" --> Mandou a mensagem pelo broker local
 ```
 *DETALHES DOS COMANDOS:*  
 _*-h* localhost_ = Conecta ao broker local  
