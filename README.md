@@ -122,12 +122,13 @@ Ao decorrer do dia, nosso projeto estava encaminhado e dando certo, conseguimos 
 - Botão
 
 Começamos a montagem, e sem demorar muito ja conseguimos deixar montado, de maneira funcional, nossa unica dificuldade foi na hora de executar o código, mas após algumas falhas, chegamos ao fim.  
+
 _PROTÓTIPO_  
 <p align="left">
   <img src="https://github.com/user-attachments/assets/003a0a44-85de-4c21-a7b0-38335aca559a" width="300"/>
 </p>  
 
- _CÓDIGO_ 👨🏻‍💻
+* _CÓDIGO_ 👨🏻‍💻*
 ```
 #include <WiFi.h>
 #include <PubSubClient.h>
@@ -209,7 +210,7 @@ void loop() {
 ```
 
 
-_EXECUÇÃO DO PROJETO_
+*_EXECUÇÃO DO PROJETO_*
 <p align="left">
   <img src="https://github.com/user-attachments/assets/b14d9938-acf2-4c44-843e-b4ad5a1907ae" width="300"/>
 </p> 
