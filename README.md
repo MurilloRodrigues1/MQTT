@@ -1,5 +1,19 @@
 # PROJETO MQTT
 Nosso projeto consiste na implementação de um broker MQTT em uma Raspberry Pi, facilitando a comunicação entre dispositivos IoT
+##  COMANDOS PARA DEFINIR AS FUNÇÕES:
+```
+mosquitto_sub -h localhost -t "chat/grupo1" -> definiu onde "quer receber" a mensagem
+```
+```
+mosquitto_pub -h localhost -t "chat/grupo1" -m "Salve, grupo, Tá ouvindo?" -> Mandou a mensagem pelo broker local
+```
+*DETALHES DOS COMANDOS:*
+-h localhost_ = Conecta ao broker local 
+-t = define o tópico
+
+
+
+
 
 ### _GUIA DO PASSO A PASSO DA INSTALAÇÃO_ 
 
@@ -42,9 +56,9 @@ sudo nano /etc/mosquitto/mosquitto.conf
 Dentro do arquivo, você pode adicionar configurações como:
 ```
 conf
-CopiarEditar
-listener 1883
-allow_anonymous true
+listener 1883 -> identifica a porta para o MQTT
+allow_anonymous true -> Define que qualquer um tem acesso ao broker sem identificação
+sudo systemctl restart mosquitto -> Reinicia o comando para salvar as novas configurações
 ```
 Salve o arquivo *(Ctrl + O, Enter, Ctrl + X)*
 ___
