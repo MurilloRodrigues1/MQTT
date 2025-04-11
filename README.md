@@ -106,6 +106,14 @@ _Salvando e identificando nossos equipamentos, para não perdemos o desenvolvime
   <img src="https://github.com/user-attachments/assets/e0ec4dba-d62a-43df-9179-d243bd4e76f7" width="300"/>
 </p>
 
+   _Começamos a aula e inicializamos o projeto colocando os comandos citados neste mesmo repositório,Primeiro foi testato com o MQTT EXPLORER, a tentativa foi executada com exito, após isso conseguimos configurar e começamos a trocar mensagem com o grupo 3, testamos a função PUB e SUB, o procedimento foi rápido e sem problemas, Fizemos também o que não foi possivel na ultima aula, e foi tudo executado com sucesso.Também começamos a esquematizar o projeto ja com o IOT, com a ESP-32_
+
+<p align="left">
+  <img src="https://github.com/user-attachments/assets/3200bea3-52ec-4a04-81b3-8ca04d4e0699" width="300"/>
+</p>
+
+_A nossa ideia em parceria com o grupo 3 foi que nós apertamos um botão, e la njo grupo 3 iria acender um led, porém melhoramos e vamos usar 3 botões, para 3 Leds do outro lado._
+
 
 
 
