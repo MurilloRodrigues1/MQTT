@@ -1,105 +1,76 @@
 # PROJETO MQTT
 Nosso projeto consiste na implementação de um broker MQTT em uma Raspberry Pi, facilitando a comunicação entre dispositivos IoT
-##  COMANDOS PARA DEFINIR AS FUNÇÕES:
+##  COMANDOS PARA DEFINIR AS FUNÇÕES 💼:
 ```
-mosquitto_sub -h localhost -t "chat/grupo1" -> definiu onde "quer receber" a mensagem
+mosquitto_sub -h localhost -t "chat/grupo1" --> definiu onde "quer receber" a mensagem
 ```
 ```
-mosquitto_pub -h localhost -t "chat/grupo1" -m "Salve, grupo, Tá ouvindo?" -> Mandou a mensagem pelo broker local
+mosquitto_pub -h localhost -t "chat/grupo1" -m "Salve grupo, Testando" --> Mandou a mensagem pelo broker local
 ```
-*DETALHES DOS COMANDOS:*
--h localhost_ = Conecta ao broker local 
--t = define o tópico
-
-
-
-
-
-### _GUIA DO PASSO A PASSO DA INSTALAÇÃO_ 
-
-### 1. Acesso à Raspberry Pi
-
-Para começar, certifique-se de que sua Raspberry Pi está ligada e conectada à internet. Você pode acessá-la via SSH ou diretamente pelo terminal.
+*DETALHES DOS COMANDOS:*  
+_*-h* localhost_ = Conecta ao broker local  
+_*-t*_ = define o tópico  
+_-m_ = mensagem a ser enviada
 ___
+*VERIFICAR O _IP_ DA RASP:*
+```
+hostname -I
+```
+___
+# Como instalar o broker Mosquitto na Raspberry Pi  
+_Pré-requisitos_:
+- Raspberry Pi ligada e com internet (Wi-Fi ou cabo)
 
-### 2. Atualização do Sistema
+- Cartão SD com Raspberry Pi OS já funcionando
 
-Antes de iniciar a instalação do Mosquitto, é importante atualizar os pacotes do sistema para garantir que você tenha os últimos updates e correções de segurança.
+- Terminal aberto (pode ser direto ou via SSH)
+
+### 1. Atualize os pacotes:
 ```
 sudo apt update
 sudo apt upgrade
 ```
-___
-
-### 3. Instalação do Mosquitto
-
-Agora, vamos instalar o Mosquitto, o broker MQTT  
+### 2. Instale o broker Mosquitto:
 ```
-sudo apt install mosquitto mosquitto-clients
+sudo apt install mosquitto
 ```
-Isso instalará tanto o Mosquitto (broker MQTT) quanto os clientes MQTT, que são úteis para testar e interagir com o broker.
-___
-### 4. Verificação da Instalação
-
-Após a instalação, é importante verificar se o serviço do Mosquitto está rodando corretamente
+### 3. Instale os clientes para testes (pub/sub):
+   -> _Isso instalará tanto o Mosquitto (broker MQTT) quanto os clientes MQTT, que são úteis para testar e interagir com o broker._
+```
+sudo apt install mosquitto-clients
+```
+### 4. Habilite o Mosquitto pra iniciar junto com o sistema _(opcional)_:
+```
+sudo systemctl enable mosquitto
+```
+### 5. Verifique se ele tá rodando:
 ```
 sudo systemctl status mosquitto
 ```
-Se estiver tudo certo, você deverá ver uma mensagem indicando que o serviço está ativo e rodando.
-
-### 5. Configuração de Acesso
-
-Por padrão, o Mosquitto permite conexões apenas na mesma máquina (localhost). Se você deseja permitir conexões de outras máquinas, você precisará editar o arquivo de configuração
+_saída:  “active (running)” = ✅_
+___
+# CONFIGURAÇÃO DE ACESSO  
+### 1. Esse comando abre o arquivo de configuração principal do Mosquitto com permissão de administrador.  
 ```
 sudo nano /etc/mosquitto/mosquitto.conf
 ```
-Dentro do arquivo, você pode adicionar configurações como:
+### 2. Dentro do arquivo, você pode adicionar configurações como:
 ```
 conf
-listener 1883 -> identifica a porta para o MQTT
-allow_anonymous true -> Define que qualquer um tem acesso ao broker sem identificação
-sudo systemctl restart mosquitto -> Reinicia o comando para salvar as novas configurações
+listener 1883 --> identifica a porta para o MQTT  
+allow_anonymous true --> Define que qualquer um tem acesso ao broker sem identificação  
+sudo systemctl restart mosquitto --> Reinicia o comando para salvar as novas configurações  
 ```
-Salve o arquivo *(Ctrl + O, Enter, Ctrl + X)*
-___
-### 6. Reiniciar o Serviço
-
+Salve o arquivo *(Ctrl + O, Enter, Ctrl + X)*  
+### 3. Reiniciar o Serviço
 Após fazer alterações na configuração, reinicie o serviço do Mosquitto para aplicar as mudanças
 ```
 sudo systemctl restart mosquitto
 ```
 ___
-### 7. Teste de Conexão
-
-Para testar se o broker MQTT está funcionando corretamente, você pode usar o cliente MQTT de teste para publicar e subscrever a mensagens.
-
-Abra dois terminais na Raspberry Pi:
-
-- Terminal 1 (*Subscribe*):
-  ```
-  mosquitto_sub -h localhost -t "test/topic"
-  ```
-- Terminal 2 (*Publish*)
-  ```
-  mosquitto_pub -h localhost -t "test/topic" -m "Hello, MQTT!"
-  ```
-Você deverá ver a mensagem "Hello, MQTT!" sendo exibida no Terminal 1.
-  ___
-### 8. Configuração de Autostart (Opcional)
-
-Caso deseje que o Mosquitto inicie automaticamente com a Raspberry Pi, você pode configurá-lo para isso
-```
-sudo systemctl enable mosquitto
-```
-### Possíveis Problemas e Soluções
-
-- Porta 1883 Não Disponível**: Verifique se outra aplicação está usando a porta 1883 e mude a configuração do Mosquitto para uma porta alternativa.
-- Permissões de Acesso**: Se tiver problemas de permissões ao acessar o broker de outras máquinas, verifique as configurações de firewall ou de rede da sua Raspberry Pi.
-
-___
 ___
 
-### _INICIANDO O PROJETO_
+# _INICIANDO O PROJETO_ 
 
 ### *1. PREPARANDO A RASPBERRY*
 
@@ -109,7 +80,7 @@ _CARTÃO JÁ CONECTADO_
 
 - Escolha o idioma e região
 
-- Configure o Wi-Fi (se não estiver usando cabo)
+- Configure o Wi-Fi
 
 - Atualize o sistema, se ele pedir
 
@@ -127,21 +98,17 @@ _ou_
 ```
 ip a
 ```
+___
+
+# DESENVOLVIMENTO DO GRUPO 💻
+_Salvando e identificando nossos equipamentos, para não perdemos o desenvolvimento_
+<p align="left">
+  <img src="https://github.com/user-attachments/assets/82152c08-2ce1-4a35-9daa-8a4594821c3e" width="300"/>
+  <img src="https://github.com/user-attachments/assets/e0ec4dba-d62a-43df-9179-d243bd4e76f7" width="300"/>
+</p>
 
 
 
-
-*_INSTALAR O MQTT_*
-```
-sudo apt install mosquitto
-```
-recebe, gerencia e distribui as mensagens entre dispositivos.  
-
-*_ATIVAR PUB E O SUB_*
-```
-sudo apt install mosquitto-clients
-```
-Instala as ferramentas de linha de comando
 
 
 
