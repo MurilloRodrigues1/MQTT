@@ -47,7 +47,7 @@ sudo systemctl enable mosquitto
 ```
 sudo systemctl status mosquitto
 ```
-_saída:  “active (running)” = ✅_
+_saída:  “active (running)” =_ ✅
 ___
 # CONFIGURAÇÃO DE ACESSO  
 ### 1. Esse comando abre o arquivo de configuração principal do Mosquitto com permissão de administrador.  
@@ -74,7 +74,7 @@ ___
 
 ### *1. PREPARANDO A RASPBERRY*
 
-_CARTÃO JÁ CONECTADO_
+_CARTÃO JÁ CONECTADO_ ✅
 
 *configuração inicial:*
 
