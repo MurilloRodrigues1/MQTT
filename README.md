@@ -9,7 +9,7 @@ mosquitto_pub -h 111.111.1.111 -t "chat/grupo1" -m "Salve grupo, Testando" --> M
 ```
 *DETALHES DOS COMANDOS:*  
 _*-h* localhost_ = Conecta ao broker local  
-_*-t*_ = define o tópico  
+_*-t*_ = define o tópico ("cordenadas")  
 _-m_ = mensagem a ser enviada
 ___
 *VERIFICAR O _IP_ DA RASP:*
