@@ -121,12 +121,7 @@ Ao decorrer do dia, nosso projeto estava encaminhado e dando certo, conseguimos 
 - Botão
 
 Começamos a montagem, e sem demorar muito ja conseguimos deixar montado, de maneira funcional, nossa unica dificuldade foi na hora de executar o código, mas após algumas falhas, chegamos ao fim.
-
-*25/04/2025*
-_O dia começou e nós montamos os equipamentos, para terminar o projeto, hoje o desafio era fazer a integração com outro grupo e também uma "avaliação" indvidual, cada um agrega 20 pontos para a nota geral para o projeto.
-A nossa ideia nao estava funcionando e precisamos trabalhar com mais um grupo, estamos trabalhando para fazer funcionar.
-Nosso primeir teste se consiste em trabalhar com json.
-A nossa idea para testar o projeto é conectando a resp, para ver se captava a mensagem, após isso, pegamos o IP da maquina do outro grupo (grupo3).
+___
 
 
 _PROTÓTIPO_  
@@ -214,13 +209,104 @@ void loop() {
   }
 }
 ```
+*CÓDIGO OFICIAL PARA A INTEGRAÇÃO*
+```
+#include <WiFi.h>
+#include <PubSubClient.h>
 
+#define LED 19
+#define BOTAO 18
 
+const char* ssid = "iot";
+const char* password = "iotsenai502";
+const char* mqtt_server = "192.168.0.173";
+const char* mqtt_topic = "chat/grupo1e3";
 
-*_EXECUÇÃO DO PROJETO_*
+WiFiClient espClient;
+PubSubClient client(espClient);
+
+bool botaoAntigo = HIGH;
+bool ledLigado = false;
+
+void setup_wifi() {
+  Serial.begin(115200);
+  WiFi.begin(ssid, password);
+  while (WiFi.status() != WL_CONNECTED) {
+    delay(500);
+    Serial.print(".");
+  }
+  Serial.println("\nWi-Fi conectado!");
+}
+
+void callback(char* topic, byte* message, unsigned int length) {
+  String msg;
+  for (int i = 0; i < length; i++) {
+    msg += (char)message[i];
+  }
+  Serial.print("Recebido: ");
+  Serial.println(msg);
+
+  if (msg == "a") {
+    digitalWrite(LED, HIGH);
+    Serial.println("LED ligado (recebido a)");
+  } else if (msg == "b") {
+    digitalWrite(LED, LOW);
+    Serial.println("LED desligado (recebido b)");
+  }
+}
+
+void reconnect() {
+  while (!client.connected()) {
+    if (client.connect("ESP32_Grupo1")) {
+      client.subscribe(mqtt_topic);
+    } else {
+      delay(2000);
+    }
+  }
+}
+
+void setup() {
+  pinMode(LED, OUTPUT);
+  pinMode(BOTAO, INPUT_PULLUP);
+  digitalWrite(LED, LOW);
+  
+  setup_wifi();
+  client.setServer(mqtt_server, 1883);
+  client.setCallback(callback);
+}
+
+void loop() {
+  if (!client.connected()) reconnect();
+  client.loop();
+
+  bool estadoBotao = digitalRead(BOTAO);
+  if (botaoAntigo == HIGH && estadoBotao == LOW) {
+    ledLigado = !ledLigado;
+    if (ledLigado) {
+      client.publish(mqtt_topic, "1");
+      Serial.println("Enviado: 1");
+    } else {
+      client.publish(mqtt_topic, "0");
+      Serial.println("Enviado: 0");
+    }
+    delay(300);
+  }
+  botaoAntigo = estadoBotao;
+}
+```
+
+*_EXECUÇÃO DO PROJETO (momentos)_*
 <p align="left">
   <img src="https://github.com/user-attachments/assets/b14d9938-acf2-4c44-843e-b4ad5a1907ae" width="300"/>
 </p> 
+
+*25/04/2025*
+_O dia começou e nós montamos os equipamentos, para terminar o projeto, hoje o desafio era fazer a integração com outro grupo e também uma "avaliação" indvidual, cada um agrega 20 pontos para a nota geral do projeto.
+A nossa ideia para testar o projeto é conectando a resp, para ver se captava a mensagem, após isso, pegamos o IP da maquina do outro grupo (grupo3), e ai começamos a intergrar o projeto para o outro grupo, após conectar, nós começamos mandando de resp para resp, vendo que funcionava, começamos a tentar mandar e esp para esp.
+
+
+
+
 
 
 
