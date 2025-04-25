@@ -66,7 +66,6 @@ Após fazer alterações na configuração, reinicie o serviço do Mosquitto par
 sudo systemctl restart mosquitto
 ```
 ___
-___
 
 # _INICIANDO O PROJETO_ 
 
@@ -106,7 +105,8 @@ ___
   <img src="https://github.com/user-attachments/assets/e0ec4dba-d62a-43df-9179-d243bd4e76f7" width="300"/>
 </p>
 
-   _Começamos a aula e inicializamos o projeto colocando os comandos citados neste mesmo repositório,Primeiro foi testato com o MQTT EXPLORER, a tentativa foi executada com exito, após isso conseguimos configurar e começamos a trocar mensagem com o grupo 3, testamos a função PUB e SUB, o procedimento foi rápido e sem problemas, Fizemos também o que não foi possivel na ultima aula, e foi tudo executado com sucesso.Também começamos a esquematizar o projeto ja com o IOT, com a ESP-32_
+   _No primeiro dia de de projeto (04/04) foi solicitado a configuração da RASPBERRY PI 4, hoje (11/04), precisamos trocar o cartão SD da RASP, e usar um pendrive, com o sistema nele, após isso ao iniciarmos a RASP ele ja iniciou normalmente, e assim conseguimos iniciar o projeto de fato.
+   Inicializamos o projeto colocando os comandos citados neste mesmo repositório. Primeiro foi testato com o MQTT EXPLORER, a tentativa foi executada com exito, após isso conseguimos configurar e começamos a trocar mensagem com o grupo 3, testamos a função PUB e SUB, o procedimento foi rápido e sem problemas, Fizemos também o que não foi possivel na ultima aula, e foi tudo executado com sucesso.Também começamos a esquematizar o projeto ja com o IOT, com a ESP-32_
 
 <p align="left">
   <img src="https://github.com/user-attachments/assets/3200bea3-52ec-4a04-81b3-8ca04d4e0699" width="300"/>
@@ -206,18 +206,13 @@ void loop() {
     botaoPressionado = false;
   }
 }
-```
-
-*_EXECUÇÃO DO PROJETO (momentos)_*
-<p align="left">
-  <img src="https://github.com/user-attachments/assets/b14d9938-acf2-4c44-843e-b4ad5a1907ae" width="300"/>
-</p> 
+``` 
 
 *25/04/2025*
 _O dia começou e nós montamos os equipamentos, para terminar o projeto, hoje o desafio era fazer a integração com outro grupo e também uma "avaliação" indvidual, cada um agrega 20 pontos para a nota geral do projeto.
 A nossa ideia para testar o projeto é conectando a resp, para ver se captava a mensagem, após isso, pegamos o IP da maquina do outro grupo (grupo3), e ai começamos a intergrar o projeto para o outro grupo, após conectar, nós começamos mandando de resp para resp, vendo que funcionava, começamos a tentar mandar e esp para esp.
 
-*CÓDIGO OFICIAL PARA A INTEGRAÇÃO*
+# CÓDIGO OFICIAL PARA A INTEGRAÇÃO
 ```
 #include <WiFi.h>
 #include <PubSubClient.h>
