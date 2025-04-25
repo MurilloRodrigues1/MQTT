@@ -122,11 +122,11 @@ Ao decorrer do dia, nosso projeto estava encaminhado e dando certo, conseguimos 
 
 Começamos a montagem, e sem demorar muito ja conseguimos deixar montado, de maneira funcional, nossa unica dificuldade foi na hora de executar o código, mas após algumas falhas, chegamos ao fim.
 
-*11/04/2025*
+*25/04/2025*
 _O dia começou e nós montamos os equipamentos, para terminar o projeto, hoje o desafio era fazer a integração com outro grupo e também uma "avaliação" indvidual, cada um agrega 20 pontos para a nota geral para o projeto.
 A nossa ideia nao estava funcionando e precisamos trabalhar com mais um grupo, estamos trabalhando para fazer funcionar.
 Nosso primeir teste se consiste em trabalhar com json.
-A nossa idea para testar o projeto é mandar uma mensagem para o nosso notebook_
+A nossa idea para testar o projeto é conectando a resp, para ver se captava a mensagem, após isso, pegamos o IP da maquina do outro grupo (grupo3).
 
 
 _PROTÓTIPO_  
@@ -214,6 +214,7 @@ void loop() {
   }
 }
 ```
+
 
 
 *_EXECUÇÃO DO PROJETO_*
