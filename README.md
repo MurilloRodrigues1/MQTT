@@ -112,7 +112,7 @@ ___
   <img src="https://github.com/user-attachments/assets/3200bea3-52ec-4a04-81b3-8ca04d4e0699" width="300"/>
 </p>
 
-_A nossa ideia em parceria com o grupo 3 foi que nós apertamos um botão, e la njo grupo 3 iria acender um led, porém melhoramos e vamos usar 3 botões, para 3 Leds do outro lado.
+_A nossa ideia em parceria com o grupo 3 foi que nós apertamos um botão, e la njo grupo 3 iria acender um led, porém melhoramos a ideia e vamos usar 3 botões, para 3 Leds do outro lado.
 Ao decorrer do dia, nosso projeto estava encaminhado e dando certo, conseguimos passar o projeto para a parte "física" usamos os seguintes equipamentos:_
 
 - ESP-32
@@ -120,7 +120,11 @@ Ao decorrer do dia, nosso projeto estava encaminhado e dando certo, conseguimos 
 - Resistor
 - Botão
 
-Começamos a montagem, e sem demorar muito ja conseguimos deixar montado, de maneira funcional, nossa unica dificuldade foi na hora de executar o código, mas após algumas falhas, chegamos ao fim.  
+Começamos a montagem, e sem demorar muito ja conseguimos deixar montado, de maneira funcional, nossa unica dificuldade foi na hora de executar o código, mas após algumas falhas, chegamos ao fim.
+
+*11/04/2025*
+_O dia começou e nós montamos os equipamentos, para terminar o projeto, hoje o desafio era fazer a integração com outro grupo e também uma "avaliação" indvidual, cada um agrega 20 pontos para a nota geral para o projeto._
+
 
 _PROTÓTIPO_  
 <p align="left">
