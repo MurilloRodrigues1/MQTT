@@ -120,9 +120,7 @@ Ao decorrer do dia, nosso projeto estava encaminhado e dando certo, conseguimos 
 - Resistor
 - Botão
 
-Começamos a montagem, e sem demorar muito ja conseguimos deixar montado, de maneira funcional, nossa unica dificuldade foi na hora de executar o código, mas após algumas falhas, chegamos ao fim.
-___
-
+Começamos a montagem, e sem demorar muito ja conseguimos deixar montado, de maneira funcional, nossa unica dificuldade foi na hora de executar o código, mas após algumas falhas, chegamos ao fim.  
 
 _PROTÓTIPO_  
 <p align="left">
@@ -209,6 +207,16 @@ void loop() {
   }
 }
 ```
+
+*_EXECUÇÃO DO PROJETO (momentos)_*
+<p align="left">
+  <img src="https://github.com/user-attachments/assets/b14d9938-acf2-4c44-843e-b4ad5a1907ae" width="300"/>
+</p> 
+
+*25/04/2025*
+_O dia começou e nós montamos os equipamentos, para terminar o projeto, hoje o desafio era fazer a integração com outro grupo e também uma "avaliação" indvidual, cada um agrega 20 pontos para a nota geral do projeto.
+A nossa ideia para testar o projeto é conectando a resp, para ver se captava a mensagem, após isso, pegamos o IP da maquina do outro grupo (grupo3), e ai começamos a intergrar o projeto para o outro grupo, após conectar, nós começamos mandando de resp para resp, vendo que funcionava, começamos a tentar mandar e esp para esp.
+
 *CÓDIGO OFICIAL PARA A INTEGRAÇÃO*
 ```
 #include <WiFi.h>
@@ -295,18 +303,23 @@ void loop() {
 }
 ```
 
+
+
+
+
+
 *_EXECUÇÃO DO PROJETO (momentos)_*
 <p align="left">
   <img src="https://github.com/user-attachments/assets/b14d9938-acf2-4c44-843e-b4ad5a1907ae" width="300"/>
 </p> 
 
-*25/04/2025*
-_O dia começou e nós montamos os equipamentos, para terminar o projeto, hoje o desafio era fazer a integração com outro grupo e também uma "avaliação" indvidual, cada um agrega 20 pontos para a nota geral do projeto.
-A nossa ideia para testar o projeto é conectando a resp, para ver se captava a mensagem, após isso, pegamos o IP da maquina do outro grupo (grupo3), e ai começamos a intergrar o projeto para o outro grupo, após conectar, nós começamos mandando de resp para resp, vendo que funcionava, começamos a tentar mandar e esp para esp.
+<p align="left">
+  <img src="https://github.com/user-attachments/assets/a233f997-439d-439e-b5fd-4487b797aafd" width="300"/>
+</p>  
 
-
-
-
+<p align="left">
+  <img src="https://github.com/user-attachments/assets/0b3ba3e4-2fa3-4c31-b15b-46ab20081264" width="300"/>
+</p>  
 
 
 
