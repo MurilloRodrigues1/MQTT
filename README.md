@@ -127,7 +127,7 @@ _PROTÓTIPO_
   <img src="https://github.com/user-attachments/assets/003a0a44-85de-4c21-a7b0-38335aca559a" width="300"/>
 </p>  
 
-# * _CÓDIGO_ 👨🏻‍💻*
+# _CÓDIGO_ 👨🏻‍💻
 ```
 #include <WiFi.h>
 #include <PubSubClient.h>
