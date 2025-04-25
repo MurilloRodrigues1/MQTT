@@ -112,7 +112,7 @@ ___
   <img src="https://github.com/user-attachments/assets/3200bea3-52ec-4a04-81b3-8ca04d4e0699" width="300"/>
 </p>
 
-_A nossa ideia em parceria com o grupo 3 foi que nós apertamos um botão, e la njo grupo 3 iria acender um led, porém melhoramos a ideia e vamos usar 3 botões, para 3 Leds do outro lado.
+_A nossa ideia em parceria com o grupo 3 foi que nós apertamos um botão, e la no grupo 3 iria acender um led.
 Ao decorrer do dia, nosso projeto estava encaminhado e dando certo, conseguimos passar o projeto para a parte "física" usamos os seguintes equipamentos:_
 
 - ESP-32
