@@ -211,6 +211,7 @@ void loop() {
 *25/04/2025*
 _O dia começou e nós montamos os equipamentos, para terminar o projeto, hoje o desafio era fazer a integração com outro grupo e também uma "avaliação" indvidual, cada um agrega 20 pontos para a nota geral do projeto.
 A nossa ideia para testar o projeto é conectando a resp, para ver se captava a mensagem, após isso, pegamos o IP da maquina do outro grupo (grupo3), e ai começamos a intergrar o projeto para o outro grupo, após conectar, nós começamos mandando de resp para resp, vendo que funcionava, começamos a tentar mandar e esp para esp.
+   Nós pegamos o IP da nossa RASP que seria o broker, e ultilizamos nos dois grupos (grupo 3) usando apenas um tópico, setado como "chat/grupo1e3" e fizemos as integração.
 
 # CÓDIGO OFICIAL PARA A INTEGRAÇÃO
 ```
